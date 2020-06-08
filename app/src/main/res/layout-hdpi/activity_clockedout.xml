@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Clockedin"
+    android:background="@drawable/wng"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clocked out"
+        android:textSize="50dp"
+        android:textColor="@android:color/black"
+        android:gravity="center" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/holo_green_dark"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvnameout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name,"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"
+            android:padding="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:id="@+id/tvstudidout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="student id"
+            android:textSize="25dp"
+            android:textColor="@android:color/black"
+            android:padding="5dp"
+            android:layout_marginTop="25dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvtextout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"/>
+    <TextView
+        android:id="@+id/tvsosotimeout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sosotimeout"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvsosodateout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="sosodateout"-->
+<!--        android:textSize="35dp"-->
+<!--        android:layout_marginTop="20 <TextView
+        android:id="@+id/tvsosodateout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sosodateout"
+        android:textSize="35dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:gravity="center"/>dp"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:gravity="center"/>-->
+</LinearLayout>

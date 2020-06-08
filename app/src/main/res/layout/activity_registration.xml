@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration"
+    android:background="@drawable/greenwhite"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registration"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@android:color/holo_green_dark"/>
+
+        <EditText
+            android:id="@+id/etfn"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:hint="First name"
+            android:textSize="30dp"
+            android:padding="1dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/border" />
+    <EditText
+        android:id="@+id/etln"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Last name"
+        android:textSize="30dp"
+        android:padding="1dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/border" />
+    <EditText
+        android:id="@+id/etstudid"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint=" Student ID"
+        android:textSize="30dp"
+        android:padding="1dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/border" />
+
+    <EditText
+        android:id="@+id/etaddress"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint=" Address"
+        android:textSize="30dp"
+        android:padding="1dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/border" />
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textSize="30dp"
+        android:padding="1dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/border" />
+    <EditText
+        android:id="@+id/etphone"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:textSize="30dp"
+        android:padding="1dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/border" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Choose Gender"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textSize="28dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/rggender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="13dp"
+        android:layout_gravity="center">
+        <RadioButton
+            android:id="@+id/rbmale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="25dp"
+            android:layout_margin="0dp"/>
+        <RadioButton
+            android:id="@+id/rbfemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_marginLeft="60dp"
+            android:textSize="25dp"
+           />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Next"
+        android:textStyle="bold"
+        android:textSize="28dp"
+        android:layout_marginLeft="280dp"/>
+
+
+
+
+
+</LinearLayout>

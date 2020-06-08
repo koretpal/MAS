@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Clockin"
+    android:background="@drawable/wng"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clock in "
+        android:textSize="50dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@android:color/holo_green_dark"/>
+
+
+    <EditText
+        android:id="@+id/etdigitsin"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter the last three digits of your Student ID"
+        android:background="@drawable/border"
+        android:layout_marginTop="18dp"
+        android:padding="15dp"
+        android:inputType="number"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colordarkash"/>
+    <ImageView
+        android:layout_marginTop="25dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:hint="Enter the last three digit of your Student ID"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@drawable/ic_fingerprint_black_24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thumprint to clock in"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="30dp"
+        android:gravity="center"/>
+
+</LinearLayout>
