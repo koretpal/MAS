@@ -22,12 +22,12 @@ import java.util.Map;
 
 public class Registration extends AppCompatActivity {
     public static TextView tvnext;
-    public static EditText etfname, etlname, etstudid,etaddress, etemail, etphone;
+    public static EditText etfname, etlname, etstudid,etaddress, etemail, etphone, etpw;
     public static RadioGroup rggender;
     public static RadioButton rbmale, rbfemale;
     public static ImageView imgback;
 
-    public static String fname,lname, studid, address, email, phone, gender, male, female, fbstudid, state, sgender;
+    public static String fname,lname, studid, address, email, phone,pw, gender, male, female, fbstudid, state, sgender;
 
 
 
@@ -41,6 +41,7 @@ public class Registration extends AppCompatActivity {
         etaddress = findViewById(R.id.etaddress);
         etemail = findViewById(R.id.etemail);
         etphone = findViewById(R.id.etphone);
+        etpw = findViewById(R.id.etpw);
         rggender = findViewById(R.id.rggender);
         rbmale = findViewById(R.id.rbmale);
         rbfemale = findViewById(R.id.rbfemale);
@@ -52,6 +53,7 @@ public class Registration extends AppCompatActivity {
         address = etaddress.getText().toString().trim();
         email = etemail.getText().toString().trim();
         phone = etphone.getText().toString().trim();
+        pw = etpw.getText().toString().trim();
         male = rbmale.getText().toString().trim();
         female = rbfemale.getText().toString().trim();
 
@@ -59,7 +61,7 @@ public class Registration extends AppCompatActivity {
         imgback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(Registration.this, MainActivity.class));
+                startActivity( new Intent(Registration.this, Welcomescreen.class));
             }
         });
         tvnext.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +73,7 @@ public class Registration extends AppCompatActivity {
                 address = etaddress.getText().toString().trim();
                 email = etemail.getText().toString().trim();
                 phone = etphone.getText().toString().trim();
+                pw = etpw.getText().toString().trim();
                 male = rbmale.getText().toString().trim();
                 female = rbfemale.getText().toString().trim();
 
@@ -96,6 +99,9 @@ public class Registration extends AppCompatActivity {
                 }
                 else if (phone.isEmpty()){
                     etphone.setError("Phone cannot be empty");
+                }
+                else if (pw.isEmpty()){
+                    etphone.setError("Password cannot be empty");
                 }
                 else if (!rbmale.isChecked() && !rbfemale.isChecked()) {
                     rbmale.setError("Choose Gender");

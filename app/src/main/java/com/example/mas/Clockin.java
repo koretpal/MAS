@@ -16,9 +16,16 @@ import android.os.CancellationSignal;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.core.utilities.Clock;
 
 import java.net.Authenticator;
@@ -33,9 +40,11 @@ public  class Clockin extends AppCompatActivity {
     KeyguardManager keyguardManager;
     Calendar calendar;
     public static EditText etdigitsin;
-
+    private ImageView imgrefresh;
+    public static Firebase mdatecheck;
     public static Boolean di, settings;
- public  static    String timein,timeinn, datein, digitsin;
+ public  static    String timein,timeinn, datein, digitsin,digitsexist;
+ public DataSnapshot dataSnapshot;
 
 
 
@@ -43,22 +52,42 @@ public  class Clockin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clockin);
-
+        imgrefresh = findViewById(R.id.imgrefresh);
         etdigitsin = findViewById(R.id.etdigitsin);
         fingerprintManager = (FingerprintManager) getSystemService(Context.FINGERPRINT_SERVICE);
         keyguardManager = (KeyguardManager) getSystemService(Context.KEYGUARD_SERVICE);
        startfingerprint();
 
-
+            imgrefresh.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    recreate();
+                    etdigitsin.getText().clear();
+                }
+            });
         timein = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
         datein = java.text.DateFormat.getDateInstance().format(Calendar.getInstance().getTime());
+
       // timein = Calendar.getInstance().getTime().toString();
-        
+        mdatecheck = new Firebase("https://masfirebaseproject-df6e3.firebaseio.com/Time Register/" +datein);
+        mdatecheck.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
+                digitsexist  = dataSnapshot.toString();
+                Log.d("dexist", digitsexist);
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+
     }
 
     private void startfingerprint() {
         if (checkfingerprintsettings()) {
-            Toast.makeText(getApplicationContext(), "Place your finger on sensor ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "1. Enter the last three digits of your student ID\n 2. Place your finger on sensor ", Toast.LENGTH_SHORT).show();
             FingerPrintAuthenticator authenticator = FingerPrintAuthenticator.getInstance();
             if (authenticator.cipherInit()) {
                 FingerprintManager.CryptoObject cryptObj = new FingerprintManager.CryptoObject(authenticator.getCipher());
@@ -106,7 +135,17 @@ public  class Clockin extends AppCompatActivity {
             digitsin = etdigitsin.getText().toString().trim();
             if (TextUtils.isEmpty(digitsin)|| digitsin.length()>3){
                 etdigitsin.setError("Enter the last three digits of your Student ID, eg 001");
-            } else {
+
+            }
+            else if (!(digitsin.equals(LoginScreen.studentid))){
+                etdigitsin.setError("Enter the Student ID you used to logged in");
+            }
+
+            else if (digitsexist.contains(digitsin)){
+                Toast.makeText(getApplicationContext(), "You have clocked in already", Toast.LENGTH_LONG).show();
+            }
+
+            else {
                 timeinn = timein;
                 Toast.makeText(Clockin.this, "Fingerprint Authentication Success ", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(Clockin.this, Clockedin.class));

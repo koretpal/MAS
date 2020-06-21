@@ -11,7 +11,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/greenwhite"
+    android:background="@color/colordarkash"
     android:orientation="vertical"
     >
 
@@ -23,7 +23,7 @@
     android:id="@+id/imgback"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:src="@drawable/ic_arrow_back_black_24dp"
+    android:src="@drawable/ic_arrow_back_white"
     android:layout_marginTop="20dp"
     android:layout_marginLeft="10dp"/>
 
@@ -36,7 +36,7 @@
         android:textSize="30sp"
         android:gravity="center"
         android:textStyle="bold"
-        android:textColor="@android:color/black" />
+        android:textColor="@color/colorwhite" />
 </LinearLayout>
 
     <View
@@ -44,7 +44,7 @@
         android:layout_height="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="20dp"
-        android:background="@android:color/holo_green_dark"/>
+        android:background="@color/coloret"/>
 
         <EditText
             android:id="@+id/etfn"
@@ -53,6 +53,7 @@
             android:hint="First name"
             android:textColorHint="@color/coloret"
             android:textSize="20sp"
+            android:inputType="textPersonName"
             android:textColor="@android:color/black"
             android:padding="1dp"
             android:layout_margin="10dp"
@@ -66,6 +67,7 @@
         android:layout_height="wrap_content"
         android:hint="Last name"
         android:textSize="20sp"
+        android:inputType="textPersonName"
         android:textColor="@android:color/black"
         android:padding="1dp"
         android:layout_margin="10dp"
@@ -78,6 +80,7 @@
         android:textColorHint="@color/coloret"
         android:layout_height="wrap_content"
         android:hint=" Student ID"
+        android:inputType="number"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:padding="1dp"
@@ -92,6 +95,7 @@
         android:textColorHint="@color/coloret"
         android:layout_height="wrap_content"
         android:hint=" Address"
+        android:inputType="textPostalAddress"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:padding="1dp"
@@ -105,6 +109,7 @@
         android:textColorHint="@color/coloret"
         android:layout_height="wrap_content"
         android:hint="Email"
+        android:inputType="textEmailAddress"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:padding="1dp"
@@ -118,6 +123,21 @@
         android:textColorHint="@color/coloret"
         android:layout_height="wrap_content"
         android:hint="Phone"
+        android:inputType="phone"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:padding="1dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/border" />
+    <EditText
+        android:id="@+id/etpw"
+        android:layout_width="340dp"
+        android:textColorHint="@color/coloret"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:padding="1dp"
@@ -128,7 +148,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorwhite"
         android:layout_marginTop="10dp"
         android:text="Choose Gender"
         android:layout_gravity="center"
@@ -148,13 +168,13 @@
             android:layout_height="wrap_content"
             android:text="Male"
             android:textSize="20sp"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorwhite"
             android:layout_margin="0dp"/>
         <RadioButton
             android:id="@+id/rbfemale"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorwhite"
             android:text="Female"
             android:layout_marginLeft="40dp"
             android:textSize="20sp"
@@ -165,7 +185,7 @@
         android:id="@+id/tvnext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:text="Next"
         android:textColor="@android:color/white"
         android:textStyle="bold"

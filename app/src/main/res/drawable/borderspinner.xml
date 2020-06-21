@@ -7,7 +7,7 @@
         android:width="10dp"
         android:color="@color/colorwhite"/>
     <solid
-        android:color="@color/colorash" />
+        android:color="@color/coloret" />
 
 
 </shape>

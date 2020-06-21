@@ -49,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tvregisterhere.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity( new Intent(MainActivity.this, Registration.class));
-            }
-        });
+//        tvregisterhere.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity( new Intent(MainActivity.this, Registration.class));
+//            }
+//        });
     }
 }

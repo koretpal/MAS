@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">MAS</string>
     <color name="colorblac">#ffff88</color>
-    <array name="State" fontcolor ="#005599">
-<!--        <item><font fgcolor='#FF4CD964'> 12+ </font></item>-->
-        <item color = "#000099"> Select State of Origin </item>
-        <item>Abia </item>
+    <array name="State" fontcolor="#005599">
+        <!--        <item><font fgcolor='#FF4CD964'> 12+ </font></item>-->
+        <item color="#000099">Select State of Origin</item>
+        <item>Abia</item>
         <item>Adamawa</item>
         <item>Anambra</item>
         <item>Akwa Ibom</item>
@@ -43,4 +43,20 @@
 
 
     </array>
+    <string name="title_activity_login_screen">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="Open">MAS</string>
+    <string name="Close">MAS</string>
+    <string name="drawer_item_settings">Settings</string>
+    <string name="drawer_item_home">Home</string>
+    <string name="clockin">Clock in</string>
+    <string name="clockout">Clock out</string>
+    <string name="logout">Log out</string>
 </resources>

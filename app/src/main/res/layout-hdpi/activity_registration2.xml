@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 <LinearLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registration"
-    android:background="@drawable/greenwhite"
+    android:background="@color/colordarkash"
     android:orientation="vertical"
     >
 <LinearLayout
@@ -20,7 +20,7 @@
         android:id="@+id/imgbback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:src="@drawable/ic_arrow_back_white"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
     <TextView
@@ -30,47 +30,46 @@
         android:textSize="28sp"
         android:gravity="center"
         android:textStyle="bold"
-        android:textColor="@android:color/black" />
+        android:textColor="@color/colorwhite" />
 </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="15dp"
-        android:background="@android:color/holo_green_dark"/>
+        android:layout_height="10dp"
+        android:background="@color/coloret"/>
     <Spinner
         android:id="@+id/spstate"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:entries="@array/State"
-        android:background="@drawable/border"
-        android:backgroundTint="@color/colordarkash"
+        android:background="@drawable/borderspinner"
         android:padding="12dp"
         android:layout_gravity="center"
         android:gravity="center"
         />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
         android:layout_marginStart="20dp"
-        android:textColor="@android:color/black"
-        android:text="Scan your thumbprint on the fingerprint scanner.\n
-Note: It is mandatory"
+        android:textColor="@color/colorwhite"
+        android:text="Click on the fingerprint image below to add your fingerprint"
         android:textSize="15sp"
         android:textStyle="bold"/>
     <ImageView
         android:id="@+id/imgfp"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
         android:layout_gravity="center"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_fingerprint_black_24dp" />
+        android:src="@drawable/ic_fingerprint_white" />
     <TextView
         android:id="@+id/tvprevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:text="Previous"
         android:textColor="@android:color/white"
         android:textStyle="bold"
@@ -82,12 +81,24 @@ Note: It is mandatory"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:layout_marginTop="30dp"
-        android:textColor="@android:color/black"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/colorwhite"
         android:layout_gravity="center"
         android:textAllCaps="false"
+        android:backgroundTint="@color/colorgreen"
         android:textSize="30dp"
         android:background="@drawable/buttonborder"/>
+
+    <TextView
+        android:id="@+id/tvSigninnn"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 
 </LinearLayout>

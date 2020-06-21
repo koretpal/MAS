@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Welcomescreen"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout"
+    android:background="@color/colordarkash">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile Attendance System"
+        android:textColor="@color/colorwhite"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp">
+    </TextView>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/maslogo"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp">
+
+        </ImageView>
+
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/check"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp">
+
+    </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="...easily manage users' attendance "
+            android:textColor="@color/colorwhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+        </TextView>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        >
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:background="@drawable/circle"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="160dp"
+        >
+
+    </View>
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:background="@drawable/circleash"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        >
+
+    </View>
+</LinearLayout>
+
+    <Button
+        android:id="@+id/btncreateacct"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorgreen"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:text="Create New Account">
+
+    </Button>
+
+    <TextView
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/colorwhite"
+        android:textStyle="bold">
+
+    </TextView>
+
+
+</LinearLayout>
